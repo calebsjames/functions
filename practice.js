@@ -74,8 +74,23 @@ const evenOrOdd = (number) => {
     
 }
 
-const whatIsIt = evenOrOdd(3)
-console.log(whatIsIt)
+const evenOrOdd = (number) => {
+    if (number % 2 === 0) {
+        return "Even"
+    } else {
+        return "Odd"
+    }
+    
+}
+
+const numbers = [1, 2, 3, 4, 5, 6]
+
+
+for (const numb of numbers) {
+    console.log(evenOrOdd(numb))
+
+}
+
 
 
 
@@ -140,3 +155,9 @@ console.log(joinWords(filterK(words)))
 
 ///////////////////////////////////
 
+
+
+const catchFish = () => {
+    
+    return SOMETHING;
+}
