@@ -24,7 +24,7 @@ const favoriteBreed = (dogBreed) => {
 const myFav = favoriteBreed("meow")
 console.log(`When it comes to pets, ${myFav}`)
 
-////////////////////////
+///////////////////////////////////
 
 
 const add = (a, b, c) => {
@@ -37,7 +37,28 @@ const added = add(1, 2, 3)
 console.log(added)
 
 
-/////////////////////////////////
+///////////////////////////////////
+
+
+
+const car = (speed, direction) => {
+
+    const moving = `the car is moving ${direction} at ${speed} mph.`
+    if (speed > 75) {
+        return `${moving} Slow Down!`
+    } else {
+        return moving;
+    }
+}
+
+console.log(car(85, "north"))
+
+
+
+
+
+
+///////////////////////////////////
 
 
 
@@ -60,7 +81,7 @@ console.log(whatIsIt)
 
 
 
-////////////////////////////
+///////////////////////////////////
 
 
 const words = [
@@ -79,10 +100,8 @@ const filterK = (data) => {
     let nonK = []
     
     for (let i = 0; i < data.length; i++) {
-        if ( data[i].startsWith("k")) {
-            
-        } else {
-            nonK.push(data[i])
+        if (!data[i].startsWith("k")) {
+            nonK.push(data[i])   
         }
     }
     const filteredForK = nonK
@@ -112,3 +131,12 @@ return value of the previous function as an argument
 */
 console.log(joinWords(filteredK))
 console.log(joinWords(filterK(words)))
+
+
+
+
+
+
+
+///////////////////////////////////
+
