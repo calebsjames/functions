@@ -74,49 +74,41 @@ const words = [
     Function to filter out `k` words
     (Google 'javascript startswith' to get started)
  */
-let nonK = []
 
-const filterK = () => {
+const filterK = (data) => {
+    let nonK = []
     
-    for (let i = 0; i < words.length; i++) {
-        if ( words[i].startsWith("k")) {
+    for (let i = 0; i < data.length; i++) {
+        if ( data[i].startsWith("k")) {
             
         } else {
-            nonK.push(words[i])
+            nonK.push(data[i])
         }
     }
     const filteredForK = nonK
     return filteredForK;
 }
 
-console.log(filterK())
-/*
-    Function to build a single string from the array
-    (Google 'javascript combine all items in array' to get started)
- */
-const joinWords = () => {
-    
-    const filteredWords = filterK()
-    const wordsString = filteredWords.join()
-    return wordsString;
-}
+// console.log(filterK(words))
 
-/*
-    Invoke the filtering function and store its return value
- */
-const joinWords = () => {
+const joinWords = (filteredData) => {
     
-    const filteredWords = filterK()
+    const filteredWords = filteredData
     const wordsString = filteredWords.join()
     
     return wordsString;
 }
 
-console.log(joinWords())
 
 /*
-    Invoke the string building function, and pass the
-    return value of the previous function as an argument
+Invoke the filtering function and store its return value
 */
+const filteredK = filterK(words)
 
 
+/*
+Invoke the string building function, and pass the
+return value of the previous function as an argument
+*/
+console.log(joinWords(filteredK))
+console.log(joinWords(filterK(words)))
